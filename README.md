@@ -1,20 +1,21 @@
-# EvoGenesis v0.1 — The First Preserve
+# EvoGenesis v0.2 — The Living Preserve
 
-Playable offline-capable iPhone-first menagerie research game.
+Illustrated hybrid preserve map and creature art with v0.1 game mechanics preserved.
 
-## Publish on GitHub Pages (iPhone)
-1. Create a public GitHub repository named `EvoGenesis`.
-2. Upload **all four files** from this folder to the repository root: `index.html`, `manifest.webmanifest`, `service-worker.js`, `icon.svg`.
-3. In repository **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, then Save.
-4. Open `https://YOUR-USERNAME.github.io/EvoGenesis/` after Pages deploys.
-5. In Safari use Share → Add to Home Screen. Open once while online to cache files for offline use.
+## iPhone GitHub upload
+1. Open your existing `Koa7-arch/EvoGenesis` repository.
+2. Upload/replace **index.html**, **manifest.webmanifest**, **service-worker.js**, **icon.svg** in the repository root.
+3. Create/upload the **assets** folder containing `preserve.webp`, `wolf.webp`, and `valley.webp` (GitHub supports folder upload through the web interface; if iPhone interface is awkward, use GitHub web desktop site).
+4. Wait for GitHub Pages deployment, then refresh https://koa7-arch.github.io/EvoGenesis/.
+5. Existing saves are stored under the original `evogenesis-v01-save` localStorage key. Do not clear Safari website data. Export a save backup first.
 
-## Game guide
-- Daily actions: 4. Care for wolves, gather supplies, and advance days.
-- Research: complete Behavior, Cold Adaptation, and Hereditary Traits.
-- Breed: complete Hereditary Traits, then pair unrelated adult wolves and name the pup.
-- Transform: complete Cold Adaptation and meet the creature's adult, level, cold gene, resonance, and welfare requirements.
-- All game data saves locally in the browser. Export JSON backups regularly, especially before clearing browser data or reinstalling the PWA.
+## What's new
+- Original illustrated forest preserve map and scenic graphics.
+- Clickable map markers for habitat, research and gathering.
+- Illustrated wolf profile, featured resident, visual research and lineage panels.
+- Responsive forest-and-gold interface, same offline PWA behavior.
 
-## v0.1 boundaries
-This is a playable management prototype, not a full graphical open-world game. One species, one enclosure, one adaptive transformation. There is no online sync or server.
+## Compatibility and limitations
+- Preserves v0.1 save format, research, creatures, lineages and transformations.
+- No new species or habitat mechanics yet. The art is a fantasy game illustration, not a simulation of individual creature appearance. The Dire Wolf currently uses a color-treated illustration.
+- Keep periodic JSON exports.
