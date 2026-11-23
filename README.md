@@ -1,21 +1,22 @@
-# EvoGenesis v0.2 — The Living Preserve
+# EvoGenesis v0.3 — The Living Menagerie
 
-Illustrated hybrid preserve map and creature art with v0.1 game mechanics preserved.
+Complete static, offline-capable GitHub Pages replacement package. **Upload all files and the assets directory to the root of your existing EvoGenesis repository.** Do not upload the ZIP itself to GitHub Pages.
 
-## iPhone GitHub upload
-1. Open your existing `Koa7-arch/EvoGenesis` repository.
-2. Upload/replace **index.html**, **manifest.webmanifest**, **service-worker.js**, **icon.svg** in the repository root.
-3. Create/upload the **assets** folder containing `preserve.webp`, `wolf.webp`, and `valley.webp` (GitHub supports folder upload through the web interface; if iPhone interface is awkward, use GitHub web desktop site).
-4. Wait for GitHub Pages deployment, then refresh https://koa7-arch.github.io/EvoGenesis/.
-5. Existing saves are stored under the original `evogenesis-v01-save` localStorage key. Do not clear Safari website data. Export a save backup first.
+## Installation on iPhone
+1. In your working v0.2 game, export a JSON creature save backup first.
+2. Upload/replace `index.html`, `manifest.webmanifest`, `service-worker.js`, `icon.svg`, `menagerie.js`, `menagerie.css`, and all three `assets/*.webp` files in the existing repository root, preserving the `assets` folder.
+3. Wait for GitHub Pages to finish deploying. Visit `https://koa7-arch.github.io/EvoGenesis/?v=0301` in Safari to check the new version.
+4. Do not clear Safari website data or uninstall the existing PWA until your creatures are verified.
 
-## What's new
-- Original illustrated forest preserve map and scenic graphics.
-- Clickable map markers for habitat, research and gathering.
-- Illustrated wolf profile, featured resident, visual research and lineage panels.
-- Responsive forest-and-gold interface, same offline PWA behavior.
+## Gameplay
+- Drag the isometric map to pan; pinch to zoom.
+- Tap wolves to inspect, care, train, or breed; tap research lodge to open research; tap supply depot to gather.
+- Select a construction tool then tap an empty map tile to place a tree (1 supply), path (1), pond (4), wolf den (5), or garden (3). Remove decorative structures with Remove. Founding buildings cannot be removed.
+- Wolves roam visually; animation positions are decorative and do not affect the underlying creature statistics.
+- Existing v0.1/v0.2 care, research, breeding, transformation, and journal mechanics are retained.
 
-## Compatibility and limitations
-- Preserves v0.1 save format, research, creatures, lineages and transformations.
-- No new species or habitat mechanics yet. The art is a fantasy game illustration, not a simulation of individual creature appearance. The Dire Wolf currently uses a color-treated illustration.
-- Keep periodic JSON exports.
+## Saves / limitations
+- Creature data uses the **unchanged** `evogenesis-v01-save` localStorage key and v1 save schema.
+- New decorative map structures use `evogenesis-v03-menagerie`, separately. Existing JSON exports only include creatures/research, **not map construction**. Do not clear browser data if you want to retain your built map.
+- Construction is currently decorative and does not increase the original 20-wolf capacity or change welfare.
+- This is a lightweight 2D canvas simulation, not a full 3D park builder. Wolf silhouettes are rendered in the map; illustrated portraits remain in the creature profiles.
