@@ -1,22 +1,20 @@
-# EvoGenesis v0.3 — The Living Menagerie
+# EvoGenesis: Mythbound — World Alpha 1.0
 
-Complete static, offline-capable GitHub Pages replacement package. **Upload all files and the assets directory to the root of your existing EvoGenesis repository.** Do not upload the ZIP itself to GitHub Pages.
+A standalone, offline-capable, top-down 2D mythological creature RPG prototype for iPhone and GitHub Pages.
 
-## Installation on iPhone
-1. In your working v0.2 game, export a JSON creature save backup first.
-2. Upload/replace `index.html`, `manifest.webmanifest`, `service-worker.js`, `icon.svg`, `menagerie.js`, `menagerie.css`, and all three `assets/*.webp` files in the existing repository root, preserving the `assets` folder.
-3. Wait for GitHub Pages to finish deploying. Visit `https://koa7-arch.github.io/EvoGenesis/?v=0301` in Safari to check the new version.
-4. Do not clear Safari website data or uninstall the existing PWA until your creatures are verified.
+## Installation
 
-## Gameplay
-- Drag the isometric map to pan; pinch to zoom.
-- Tap wolves to inspect, care, train, or breed; tap research lodge to open research; tap supply depot to gather.
-- Select a construction tool then tap an empty map tile to place a tree (1 supply), path (1), pond (4), wolf den (5), or garden (3). Remove decorative structures with Remove. Founding buildings cannot be removed.
-- Wolves roam visually; animation positions are decorative and do not affect the underlying creature statistics.
-- Existing v0.1/v0.2 care, research, breeding, transformation, and journal mechanics are retained.
+Upload `index.html`, `manifest.webmanifest`, `service-worker.js`, and `icon.svg` to the root of the existing GitHub Pages repository. If updating an existing EvoGenesis repository, keep any other files unless intentionally removing them. Wait for deployment and visit `https://koa7-arch.github.io/EvoGenesis/?mythbound=1` in Safari. The previous v0.1–v0.4 saves are **not migrated into this new game**: they are intentionally left untouched under their old localStorage keys, to avoid damaging progress in the old game. This new game stores progress in `evogenesis_mythbound_v1`. Export the old game's save before replacing its files.
 
-## Saves / limitations
-- Creature data uses the **unchanged** `evogenesis-v01-save` localStorage key and v1 save schema.
-- New decorative map structures use `evogenesis-v03-menagerie`, separately. Existing JSON exports only include creatures/research, **not map construction**. Do not clear browser data if you want to retain your built map.
-- Construction is currently decorative and does not increase the original 20-wolf capacity or change welfare.
-- This is a lightweight 2D canvas simulation, not a full 3D park builder. Wolf silhouettes are rendered in the map; illustrated portraits remain in the creature profiles.
+## Play
+
+- Use the D-pad (or swipe) to walk; A to interact with adjacent characters, structures, and creatures.
+- Start in Asterfall Village; speak to Elder Rowan, then walk south through the gap in the border to Whisperwood Trail.
+- Continue south from Whisperwood to reach the Sunken Ruins.
+- Encounter a creature and offer a bond. Once recruited, your first active creature can fight; weakening a wild creature improves the bonding chance.
+- Visit the village inn or sanctuary to restore health.
+- Use Menu for Party, Bestiary, Quest Journal, and JSON backup export/import.
+
+## Scope and limitations
+
+This is a playable **world alpha**, not a full game. Maps are handcrafted character-grid layouts rendered with procedural pixel-style canvas art; no licensed assets or external libraries. NPCs, town, routes, wild creature tokens, battle, bonding, save/export and offline caching are implemented. There is no branching story, animation sprite sheets, character customization, real-world accurate full mythological catalog, deep combat, shops, or complete sanctuary simulation yet. Creatures use emoji stand-ins, not original creature sprite sheets. World transitions use north/south gateways. Old preserve saves remain separate and unmodified; direct migration is not implemented. Test in Safari before treating as a stable release.
